@@ -1,10 +1,11 @@
-import { View, Text } from 'react-native';
-import React from 'react';
+import { View } from 'react-native';
+
+import { Header } from '@/components';
 
 export function HomeScreen() {
   return (
     <View>
-      <Text>HomeScreen</Text>
+      <Header title="Unidades de Saúde" />
     </View>
   );
 }

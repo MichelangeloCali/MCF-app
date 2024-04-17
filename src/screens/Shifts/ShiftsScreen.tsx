@@ -1,9 +1,11 @@
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
+
+import { Header } from '@/components';
 
 export function ShiftsScreen() {
   return (
     <View>
-      <Text>ShiftsScreen</Text>
+      <Header title="Meus Turnos" />
     </View>
   );
 }

@@ -1,9 +1,11 @@
-import { Text, View } from 'react-native';
+import { View } from 'react-native';
+
+import { Header } from '@/components';
 
 export function ProfileScreen() {
   return (
     <View>
-      <Text>ProfileScreen</Text>
+      <Header title="Fulano de Tal" />
     </View>
   );
 }

@@ -16,7 +16,7 @@ export function AppNavigator() {
         component={HomeScreen}
         options={{
           tabBarIcon: ({ focused }) => (
-            <FontAwesome5 name="hospital-alt" color={focused ? tw.color('primary') : tw.color('grey-500')} size={20} />
+            <FontAwesome5 name="hospital-alt" color={focused ? tw.color('primary') : tw.color('grey-250')} size={24} />
           ),
         }}
       />
@@ -25,7 +25,7 @@ export function AppNavigator() {
         component={ShiftsScreen}
         options={{
           tabBarIcon: ({ focused }) => (
-            <FontAwesome5 name="notes-medical" color={focused ? tw.color('primary') : tw.color('grey-500')} size={20} />
+            <FontAwesome5 name="notes-medical" color={focused ? tw.color('primary') : tw.color('grey-250')} size={24} />
           ),
         }}
       />
@@ -34,7 +34,7 @@ export function AppNavigator() {
         component={ProfileScreen}
         options={{
           tabBarIcon: ({ focused }) => (
-            <FontAwesome5 name="user-md" color={focused ? tw.color('primary') : tw.color('grey-500')} size={20} />
+            <FontAwesome5 name="user-md" color={focused ? tw.color('primary') : tw.color('grey-250')} size={24} />
           ),
         }}
       />
