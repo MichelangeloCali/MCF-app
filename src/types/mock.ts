@@ -2,13 +2,13 @@ import { Hospital } from './index';
 
 export const MOCK: Hospital[] = [
   {
-    id: '1',
+    healthUnitId: '1',
     name: 'Hospital São Lucas',
     type: 'hospital',
     hours: 24,
     shifts: [
       {
-        id: '1',
+        shiftId: '1',
         userId: '123',
         available: false,
         period: 'morning',
@@ -17,7 +17,7 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-18T16:00:00'),
       },
       {
-        id: '2',
+        shiftId: '2',
         userId: '',
         available: true,
         period: 'afternoon',
@@ -26,7 +26,7 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-19T00:00:00'),
       },
       {
-        id: '3',
+        shiftId: '3',
         userId: '',
         available: true,
         period: 'night',
@@ -38,13 +38,13 @@ export const MOCK: Hospital[] = [
     shiftsAmount: 3,
   },
   {
-    id: '2',
+    healthUnitId: '2',
     name: 'Clinica Santa Maria',
     type: 'clinic',
     hours: 12,
     shifts: [
       {
-        id: '4',
+        shiftId: '4',
         userId: '456',
         available: true,
         period: 'morning',
@@ -53,7 +53,7 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-18T14:00:00'),
       },
       {
-        id: '5',
+        shiftId: '5',
         userId: '3565',
         available: false,
         period: 'afternoon',
@@ -65,13 +65,13 @@ export const MOCK: Hospital[] = [
     shiftsAmount: 2,
   },
   {
-    id: '3',
+    healthUnitId: '3',
     name: 'Hospital Santa Clara',
     type: 'hospital',
     hours: 24,
     shifts: [
       {
-        id: '6',
+        shiftId: '6',
         userId: '',
         available: true,
         period: 'morning',
@@ -80,7 +80,7 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-18T16:00:00'),
       },
       {
-        id: '7',
+        shiftId: '7',
         userId: '',
         available: true,
         period: 'afternoon',
@@ -89,7 +89,7 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-19T00:00:00'),
       },
       {
-        id: '8',
+        shiftId: '8',
         userId: '5656',
         available: false,
         period: 'night',
@@ -101,13 +101,13 @@ export const MOCK: Hospital[] = [
     shiftsAmount: 3,
   },
   {
-    id: '4',
+    healthUnitId: '4',
     name: 'Clinica São João',
     type: 'clinic',
     hours: 12,
     shifts: [
       {
-        id: '9',
+        shiftId: '9',
         userId: '',
         available: true,
         period: 'morning',
@@ -116,7 +116,7 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-21T14:00:00'),
       },
       {
-        id: '10',
+        shiftId: '10',
         userId: '4676767',
         available: false,
         period: 'afternoon',
@@ -128,13 +128,13 @@ export const MOCK: Hospital[] = [
     shiftsAmount: 2,
   },
   {
-    id: '5',
+    healthUnitId: '5',
     name: 'Hospital Nossa Senhora',
     type: 'hospital',
     hours: 24,
     shifts: [
       {
-        id: '11',
+        shiftId: '11',
         userId: '',
         available: true,
         period: 'morning',
@@ -143,7 +143,7 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-19T16:00:00'),
       },
       {
-        id: '13',
+        shiftId: '13',
         userId: '3345',
         available: false,
         period: 'night',
@@ -155,13 +155,13 @@ export const MOCK: Hospital[] = [
     shiftsAmount: 2,
   },
   {
-    id: '6',
+    healthUnitId: '6',
     name: 'Clinica Esperança',
     type: 'clinic',
     hours: 12,
     shifts: [
       {
-        id: '14',
+        shiftId: '14',
         userId: '4564565',
         available: false,
         period: 'morning',
@@ -170,7 +170,7 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-20T14:00:00'),
       },
       {
-        id: '15',
+        shiftId: '15',
         userId: '456454',
         available: false,
         period: 'afternoon',
@@ -182,13 +182,13 @@ export const MOCK: Hospital[] = [
     shiftsAmount: 2,
   },
   {
-    id: '7',
+    healthUnitId: '7',
     name: 'Hospital Universitário',
     type: 'hospital',
     hours: 24,
     shifts: [
       {
-        id: '16',
+        shiftId: '16',
         userId: '',
         available: true,
         period: 'morning',
@@ -200,13 +200,13 @@ export const MOCK: Hospital[] = [
     shiftsAmount: 1,
   },
   {
-    id: '7',
+    healthUnitId: '7',
     name: 'Hospital Recife',
     type: 'hospital',
     hours: 24,
     shifts: [
       {
-        id: '17',
+        shiftId: '17',
         userId: '',
         available: true,
         period: 'morning',
@@ -215,7 +215,7 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-18T20:00:00'),
       },
       {
-        id: '18',
+        shiftId: '18',
         userId: '76767',
         available: false,
         period: 'afternoon',
@@ -227,13 +227,13 @@ export const MOCK: Hospital[] = [
     shiftsAmount: 2,
   },
   {
-    id: '6',
+    healthUnitId: '6',
     name: 'Clinica Hair',
     type: 'clinic',
     hours: 12,
     shifts: [
       {
-        id: '19',
+        shiftId: '19',
         userId: '4564565',
         available: false,
         period: 'morning',
@@ -242,7 +242,7 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-20T14:00:00'),
       },
       {
-        id: '20',
+        shiftId: '20',
         userId: '95964',
         available: false,
         period: 'afternoon',

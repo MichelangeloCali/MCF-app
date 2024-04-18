@@ -2,13 +2,13 @@ import { FontAwesome5 } from '@expo/vector-icons';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import { tw } from '@/lib/tailwind';
-import { HomeScreen, ProfileScreen, ShiftsScreen } from '@/screens';
+import { HomeScreen, ProfileScreen, MyShiftsScreen } from '@/screens';
 
 import type { RootTabParamList } from './types';
 
 const Tab = createBottomTabNavigator<RootTabParamList>();
 
-export function AppNavigator() {
+export function TabRoutes() {
   return (
     <Tab.Navigator screenOptions={{ headerShown: false, tabBarShowLabel: false }}>
       <Tab.Screen
@@ -22,7 +22,7 @@ export function AppNavigator() {
       />
       <Tab.Screen
         name="Shifts"
-        component={ShiftsScreen}
+        component={MyShiftsScreen}
         options={{
           tabBarIcon: ({ focused }) => (
             <FontAwesome5 name="notes-medical" color={focused ? tw.color('primary') : tw.color('grey-250')} size={24} />

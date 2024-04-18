@@ -1,3 +1,4 @@
 export * from './Home';
-export * from './Shifts';
+export * from './MyShifts';
 export * from './Profile';
+export * from './HospitalShifts';

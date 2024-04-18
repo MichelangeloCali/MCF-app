@@ -1,5 +1,5 @@
 export type Shifts = {
-  id: string;
+  shiftId: string;
   userId: string;
   available: boolean;
   period: 'morning' | 'afternoon' | 'night';
@@ -9,7 +9,7 @@ export type Shifts = {
 };
 
 export type Hospital = {
-  id: string;
+  healthUnitId: string;
   name: string;
   type: 'hospital' | 'clinic';
   hours: 24 | 12;

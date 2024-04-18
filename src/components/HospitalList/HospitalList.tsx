@@ -1,4 +1,4 @@
-import { ScrollView, FlatList, type ListRenderItem } from 'react-native';
+import { FlatList, type ListRenderItem } from 'react-native';
 
 import { tw } from '@/lib';
 import { HospitalCard } from '../HospitalCard';
@@ -17,13 +17,12 @@ export function HospitalList() {
   }
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-      <FlatList
-        contentContainerStyle={tw`px-4 py-4 gap-4`}
-        data={data || []}
-        keyExtractor={(item) => String(item.name)}
-        renderItem={renderItem}
-      />
-    </ScrollView>
+    <FlatList
+      contentContainerStyle={tw`px-4 py-4 gap-4 flex-grow-1`}
+      data={data}
+      keyExtractor={(item) => String(item.name)}
+      renderItem={renderItem}
+      showsVerticalScrollIndicator={false}
+    />
   );
 }
