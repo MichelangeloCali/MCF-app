@@ -12,7 +12,7 @@ export function HeaderSection({ title, children }: HeaderSectionPropsType) {
   return (
     <View style={tw`items-center py-4 bg-primary gap-4`}>
       {children}
-      <Text style={tw`text-white font-sans-bold text-base`}>{title}</Text>
+      <Text style={tw`text-white font-sans-bold text-base text-center mb-3`}>{title}</Text>
     </View>
   );
 }

@@ -1,7 +1,7 @@
 import { View } from 'react-native';
 import type { NativeStackScreenProps } from '@react-navigation/native-stack';
 
-import { Header, HeaderSection } from '@/components';
+import { Header, HeaderSection, DatePicker } from '@/components';
 import { tw } from '@/lib';
 import { FACILITIES } from '@/utils/mock';
 import type { RootStackParamList } from '@/routes/types';
@@ -22,6 +22,7 @@ export function HealthFacilityShiftsScreen({ route }: HealthFacilityShiftsScreen
     <View style={tw`flex-1`}>
       <Header showGoBack />
       <HeaderSection title={findHospitalShiftDetails?.name || ''} />
+      <DatePicker />
       <HealthFacilityShiftsList healthFacilityId={healthFacilityId} />
     </View>
   );
