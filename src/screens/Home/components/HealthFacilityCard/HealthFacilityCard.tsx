@@ -36,7 +36,7 @@ export function HealthFacilityCard({ data }: HealthFacilityCardPropsType) {
         </View>
       </View>
 
-      <FontAwesome5 name="chevron-right" size={24} color={tw.color('grey-250')} />
+      <FontAwesome5 name="chevron-right" size={24} color={tw.color('primary')} />
     </Pressable>
   );
 }

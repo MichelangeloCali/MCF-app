@@ -3,6 +3,7 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 import { Header, HeaderSection } from '@/components';
 import { tw } from '@/lib';
+import { ProfileCard } from './components';
 
 export function ProfileScreen() {
   return (
@@ -16,6 +17,8 @@ export function ProfileScreen() {
           </View>
         }
       />
+
+      <ProfileCard />
     </View>
   );
 }
