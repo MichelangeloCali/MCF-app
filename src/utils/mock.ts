@@ -1,8 +1,8 @@
-import { Hospital } from './index';
+import { HealthFacility } from '../types/index';
 
-export const MOCK: Hospital[] = [
+export const MOCK: HealthFacility[] = [
   {
-    healthUnitId: '1',
+    healthFacilityId: '1',
     name: 'Hospital São Lucas',
     type: 'hospital',
     hours: 24,
@@ -35,10 +35,10 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-19T08:00:00'),
       },
     ],
-    shiftsAmount: 3,
+    shiftsPerDay: 3,
   },
   {
-    healthUnitId: '2',
+    healthFacilityId: '2',
     name: 'Clinica Santa Maria',
     type: 'clinic',
     hours: 12,
@@ -62,10 +62,10 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-18T20:00:00'),
       },
     ],
-    shiftsAmount: 2,
+    shiftsPerDay: 2,
   },
   {
-    healthUnitId: '3',
+    healthFacilityId: '3',
     name: 'Hospital Santa Clara',
     type: 'hospital',
     hours: 24,
@@ -98,10 +98,10 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-19T08:00:00'),
       },
     ],
-    shiftsAmount: 3,
+    shiftsPerDay: 3,
   },
   {
-    healthUnitId: '4',
+    healthFacilityId: '4',
     name: 'Clinica São João',
     type: 'clinic',
     hours: 12,
@@ -125,10 +125,10 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-21T20:00:00'),
       },
     ],
-    shiftsAmount: 2,
+    shiftsPerDay: 2,
   },
   {
-    healthUnitId: '5',
+    healthFacilityId: '5',
     name: 'Hospital Nossa Senhora',
     type: 'hospital',
     hours: 24,
@@ -152,10 +152,10 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-20T04:00:00'),
       },
     ],
-    shiftsAmount: 2,
+    shiftsPerDay: 2,
   },
   {
-    healthUnitId: '6',
+    healthFacilityId: '6',
     name: 'Clinica Esperança',
     type: 'clinic',
     hours: 12,
@@ -179,10 +179,10 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-20T20:00:00'),
       },
     ],
-    shiftsAmount: 2,
+    shiftsPerDay: 2,
   },
   {
-    healthUnitId: '7',
+    healthFacilityId: '7',
     name: 'Hospital Universitário',
     type: 'hospital',
     hours: 24,
@@ -197,10 +197,10 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-19T08:00:00'),
       },
     ],
-    shiftsAmount: 1,
+    shiftsPerDay: 1,
   },
   {
-    healthUnitId: '7',
+    healthFacilityId: '8',
     name: 'Hospital Recife',
     type: 'hospital',
     hours: 24,
@@ -224,10 +224,10 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-19T08:00:00'),
       },
     ],
-    shiftsAmount: 2,
+    shiftsPerDay: 2,
   },
   {
-    healthUnitId: '6',
+    healthFacilityId: '9',
     name: 'Clinica Hair',
     type: 'clinic',
     hours: 12,
@@ -251,6 +251,6 @@ export const MOCK: Hospital[] = [
         endTime: new Date('2024-04-20T20:00:00'),
       },
     ],
-    shiftsAmount: 2,
+    shiftsPerDay: 2,
   },
 ];

@@ -1,14 +1,14 @@
 import { FlatList, type ListRenderItem } from 'react-native';
 
 import { tw } from '@/lib';
-import { HospitalCard } from '../HospitalCard';
-import type { Hospital } from '@/types';
-import { MOCK } from '@/types/mock';
+import { MOCK } from '@/utils/mock';
+import type { HealthFacility } from '@/types';
+import { HealthFacilityCard } from '../HealthFacilityCard';
 
-export function HospitalList() {
-  let data: Hospital[];
+export function HealthFacilityList() {
+  let data: HealthFacility[];
 
-  const renderItem: ListRenderItem<Hospital> = ({ item }) => <HospitalCard data={item} />;
+  const renderItem: ListRenderItem<HealthFacility> = ({ item }) => <HealthFacilityCard data={item} />;
 
   data = MOCK;
 

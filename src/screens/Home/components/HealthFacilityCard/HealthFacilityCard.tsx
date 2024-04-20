@@ -3,20 +3,20 @@ import { FontAwesome5 } from '@expo/vector-icons';
 
 import { tw } from '@/lib';
 import { useNavigation } from '@/hooks';
-import type { Hospital } from '@/types';
+import type { HealthFacility } from '@/types';
 
-type HospitalCardPropsType = {
-  data: Hospital;
+type HealthFacilityCardPropsType = {
+  data: HealthFacility;
 };
 
-export function HospitalCard({ data }: HospitalCardPropsType) {
+export function HealthFacilityCard({ data }: HealthFacilityCardPropsType) {
   const { navigate } = useNavigation();
 
-  const { healthUnitId } = data;
+  const { healthFacilityId } = data;
   const hospital = data.type === 'hospital';
 
   const onPressNavigation = () => {
-    navigate('HospitalShifts', { healthUnitId });
+    navigate('HealthFacilityShifts', { healthFacilityId });
   };
 
   return (
@@ -29,9 +29,9 @@ export function HospitalCard({ data }: HospitalCardPropsType) {
       </View>
       <View>
         <Text style={tw`font-sans-bold`}>{data.name}</Text>
-        <Text>Estabelecimento: {hospital ? 'Hospital' : 'Clínica'}</Text>
-        <Text>Funcionamento: {data.hours}h</Text>
-        <Text>Turnos: {data.shiftsAmount}</Text>
+        <Text style={tw`font-sans-reg`}>Estabelecimento: {hospital ? 'Hospital' : 'Clínica'}</Text>
+        <Text style={tw`font-sans-reg`}>Funcionamento: {data.hours}h</Text>
+        <Text style={tw`font-sans-reg`}>Turnos: {data.shiftsPerDay}</Text>
       </View>
     </Pressable>
   );
