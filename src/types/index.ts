@@ -18,3 +18,8 @@ export type HealthFacility = {
   shifts: Shift[];
   shiftsPerDay: 1 | 2 | 3 | 4;
 };
+
+export type MyShifts = Shift & {
+  healthFacilityType: 'hospital' | 'clinic';
+  healthFacilityName: string;
+};

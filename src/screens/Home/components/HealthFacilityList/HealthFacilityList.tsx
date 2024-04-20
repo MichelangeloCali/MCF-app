@@ -1,7 +1,7 @@
 import { FlatList, type ListRenderItem } from 'react-native';
 
 import { tw } from '@/lib';
-import { MOCK } from '@/utils/mock';
+import { FACILITIES } from '@/utils/mock';
 import type { HealthFacility } from '@/types';
 import { HealthFacilityCard } from '../HealthFacilityCard';
 
@@ -10,7 +10,7 @@ export function HealthFacilityList() {
 
   const renderItem: ListRenderItem<HealthFacility> = ({ item }) => <HealthFacilityCard data={item} />;
 
-  data = MOCK;
+  data = FACILITIES;
 
   if (!data?.length) {
     return null;

@@ -21,18 +21,22 @@ export function HealthFacilityCard({ data }: HealthFacilityCardPropsType) {
 
   return (
     <Pressable
-      style={tw`flex-row bg-white rounded p-3 gap-4 shadow-md h-100px items-center`}
+      style={tw`flex-row bg-white rounded gap-3 p-3 shadow-md h-100px items-center justify-between`}
       onPress={onPressNavigation}
     >
-      <View style={tw`w-70px items-center`}>
-        <FontAwesome5 name={hospital ? 'hospital' : 'clinic-medical'} size={50} color={tw.color('grey-500')} />
+      <View style={tw`flex-row items-center gap-3`}>
+        <View style={tw`w-44px items-center`}>
+          <FontAwesome5 name={hospital ? 'hospital' : 'clinic-medical'} size={30} color={tw.color('grey-500')} />
+        </View>
+        <View>
+          <Text style={tw`font-sans-bold`}>{data.name}</Text>
+          <Text style={tw`font-sans-reg text-xs`}>Estabelecimento: {hospital ? 'Hospital' : 'Clínica'}</Text>
+          <Text style={tw`font-sans-reg text-xs`}>Funcionamento: {data.hours}h</Text>
+          <Text style={tw`font-sans-reg text-xs`}>Turnos: {data.shiftsPerDay}</Text>
+        </View>
       </View>
-      <View>
-        <Text style={tw`font-sans-bold`}>{data.name}</Text>
-        <Text style={tw`font-sans-reg`}>Estabelecimento: {hospital ? 'Hospital' : 'Clínica'}</Text>
-        <Text style={tw`font-sans-reg`}>Funcionamento: {data.hours}h</Text>
-        <Text style={tw`font-sans-reg`}>Turnos: {data.shiftsPerDay}</Text>
-      </View>
+
+      <FontAwesome5 name="chevron-right" size={24} color={tw.color('grey-250')} />
     </Pressable>
   );
 }

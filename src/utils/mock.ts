@@ -1,6 +1,6 @@
-import { HealthFacility } from '../types/index';
+import { HealthFacility, MyShifts } from '../types/index';
 
-export const MOCK: HealthFacility[] = [
+export const FACILITIES: HealthFacility[] = [
   {
     healthFacilityId: '1',
     name: 'Hospital São Lucas',
@@ -54,7 +54,7 @@ export const MOCK: HealthFacility[] = [
       },
       {
         shiftId: '5',
-        userId: '3565',
+        userId: '123',
         available: false,
         period: 'afternoon',
         duration: 6,
@@ -90,7 +90,7 @@ export const MOCK: HealthFacility[] = [
       },
       {
         shiftId: '8',
-        userId: '5656',
+        userId: '123',
         available: false,
         period: 'night',
         duration: 8,
@@ -117,7 +117,7 @@ export const MOCK: HealthFacility[] = [
       },
       {
         shiftId: '10',
-        userId: '4676767',
+        userId: '123',
         available: false,
         period: 'afternoon',
         duration: 6,
@@ -144,7 +144,7 @@ export const MOCK: HealthFacility[] = [
       },
       {
         shiftId: '13',
-        userId: '3345',
+        userId: '123',
         available: false,
         period: 'night',
         duration: 12,
@@ -243,7 +243,7 @@ export const MOCK: HealthFacility[] = [
       },
       {
         shiftId: '20',
-        userId: '95964',
+        userId: '123',
         available: false,
         period: 'afternoon',
         duration: 6,
@@ -252,5 +252,74 @@ export const MOCK: HealthFacility[] = [
       },
     ],
     shiftsPerDay: 2,
+  },
+];
+
+export const MY_SHIFTS: MyShifts[] = [
+  {
+    shiftId: '1',
+    userId: '123',
+    healthFacilityType: 'hospital',
+    healthFacilityName: 'Hospital São Lucas',
+    available: false,
+    period: 'morning',
+    duration: 8,
+    startTime: new Date('2024-04-18T08:00:00'),
+    endTime: new Date('2024-04-18T16:00:00'),
+  },
+  {
+    shiftId: '5',
+    userId: '123',
+    healthFacilityType: 'clinic',
+    healthFacilityName: 'Clinica Santa Maria',
+    available: false,
+    period: 'afternoon',
+    duration: 6,
+    startTime: new Date('2024-04-18T14:00:00'),
+    endTime: new Date('2024-04-18T20:00:00'),
+  },
+  {
+    shiftId: '8',
+    userId: '123',
+    healthFacilityType: 'hospital',
+    healthFacilityName: 'Hospital Santa Clara',
+    available: false,
+    period: 'night',
+    duration: 8,
+    startTime: new Date('2024-04-19T00:00:00'),
+    endTime: new Date('2024-04-19T08:00:00'),
+  },
+  {
+    shiftId: '10',
+    userId: '123',
+    healthFacilityType: 'clinic',
+    healthFacilityName: 'Clinica São João',
+    available: false,
+    period: 'afternoon',
+    duration: 6,
+    startTime: new Date('2024-04-21T14:00:00'),
+    endTime: new Date('2024-04-21T20:00:00'),
+  },
+  {
+    shiftId: '13',
+    userId: '123',
+    healthFacilityType: 'hospital',
+    healthFacilityName: 'Hospital Nossa Senhora',
+    available: false,
+    period: 'night',
+    duration: 12,
+    startTime: new Date('2024-04-20T00:00:00'),
+    endTime: new Date('2024-04-20T04:00:00'),
+  },
+  {
+    shiftId: '20',
+    userId: '123',
+    healthFacilityType: 'clinic',
+    healthFacilityName: 'Clinica Hair',
+    available: false,
+    period: 'afternoon',
+    duration: 6,
+    startTime: new Date('2024-04-20T14:00:00'),
+    endTime: new Date('2024-04-20T20:00:00'),
   },
 ];

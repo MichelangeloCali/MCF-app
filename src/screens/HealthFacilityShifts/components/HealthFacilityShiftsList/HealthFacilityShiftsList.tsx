@@ -1,7 +1,7 @@
 import { FlatList, type ListRenderItem } from 'react-native';
 
 import { tw } from '@/lib';
-import { MOCK } from '@/utils/mock';
+import { FACILITIES } from '@/utils/mock';
 import type { Shift } from '@/types';
 import { HealthFacilityShiftCard } from '../HealthFacilityShiftCard';
 
@@ -14,7 +14,7 @@ export function HealthFacilityShiftsList({ healthFacilityId }: HealthFacilityShi
 
   const renderItem: ListRenderItem<Shift> = ({ item }) => <HealthFacilityShiftCard shift={item} />;
 
-  const findHospitalShiftDetails = MOCK.find((health) => health.healthFacilityId === healthFacilityId);
+  const findHospitalShiftDetails = FACILITIES.find((health) => health.healthFacilityId === healthFacilityId);
 
   data = findHospitalShiftDetails?.shifts;
 
