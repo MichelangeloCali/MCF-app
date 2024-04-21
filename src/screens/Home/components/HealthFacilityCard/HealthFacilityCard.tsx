@@ -12,12 +12,14 @@ type HealthFacilityCardPropsType = {
 export function HealthFacilityCard({ data }: HealthFacilityCardPropsType) {
   const { navigate } = useNavigation();
 
-  const { healthFacilityId } = data;
+  const { healthFacilityId, name } = data;
   const hospital = data.type === 'hospital';
 
   const onPressNavigation = () => {
-    navigate('HealthFacilityShifts', { healthFacilityId });
+    navigate('HealthFacilityShifts', { healthFacilityId, healthFacilityName: name });
   };
+
+  console.log('healthFacilityId', healthFacilityId);
 
   return (
     <Pressable

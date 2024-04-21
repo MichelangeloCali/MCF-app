@@ -2,7 +2,6 @@ import { FlatList, type ListRenderItem } from 'react-native';
 
 import { useHealthFacilities } from '@/api/health-facility';
 import { tw } from '@/lib';
-import { FACILITIES } from '@/utils/mock';
 import type { HealthFacility } from '@/types';
 
 import { HealthFacilityCard } from '../HealthFacilityCard';

@@ -4,7 +4,7 @@ import { QueryKeys } from '@/enums/QueryKeys';
 import { api } from '@/lib';
 import type { HealthFacility } from '@/types';
 
-const LIMIT = 10;
+const LIMIT = 4;
 
 async function getHealthFacilities(page: number) {
   const { data } = await api.get<HealthFacility[]>('/health-facility', {
@@ -14,9 +14,9 @@ async function getHealthFacilities(page: number) {
     },
   });
 
-  const nextPage = page + 1;
+  const nextPage = page + LIMIT;
   const hasNextPage = data.length === LIMIT;
-
+  console.log(data, nextPage, hasNextPage);
   return { data, nextPage, hasNextPage };
 }
 
@@ -24,7 +24,7 @@ export const useHealthFacilities = () =>
   useInfiniteQuery({
     queryKey: [QueryKeys.HealthFacility],
     queryFn: ({ pageParam }) => getHealthFacilities(pageParam),
-    initialPageParam: 1,
+    initialPageParam: 0,
     getNextPageParam: (lastPage) => {
       if (lastPage.hasNextPage) {
         return lastPage.nextPage;

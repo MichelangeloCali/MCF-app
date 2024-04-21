@@ -9,5 +9,5 @@ export type RootTabParamList = {
 
 export type RootStackParamList = {
   App: NavigatorScreenParams<RootTabParamList>;
-  HealthFacilityShifts: { healthFacilityId: string };
+  HealthFacilityShifts: { healthFacilityId: string; healthFacilityName: string };
 };
