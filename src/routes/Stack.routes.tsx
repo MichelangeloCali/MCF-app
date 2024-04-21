@@ -1,6 +1,7 @@
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 import { AuthScreen, HealthFacilityShiftsScreen } from '@/screens';
+import { useIsLoggedIn } from '@/stores/auth';
 
 import type { RootStackParamList } from './types';
 import { TabRoutes } from './Tab.routes';
@@ -8,7 +9,7 @@ import { TabRoutes } from './Tab.routes';
 const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export function StackRoutes() {
-  const isLoggedIn = false;
+  const isLoggedIn = useIsLoggedIn();
 
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }}>

@@ -1,9 +1,12 @@
 import dayjs from 'dayjs';
-import 'dayjs/locale/pt-br';
+// import 'dayjs/locale/pt-br';
+import 'dayjs/locale/en-gb';
 
 import type { Period } from '@/types';
 
 export const formatDateTimeRange = (date: Date): string => {
+  dayjs.locale('en-gb');
+
   const formattedDate = dayjs(date).format('DD/MM [às] HH[h]mm');
   return formattedDate;
 };
@@ -22,7 +25,7 @@ export const translatePeriodToPt = (period: Period): string => {
 };
 
 export const getWeekDays = () => {
-  dayjs.locale('pt-br');
+  dayjs.locale('en-gb');
 
   const currentDate = dayjs();
 

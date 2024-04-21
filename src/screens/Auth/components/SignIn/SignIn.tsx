@@ -1,8 +1,11 @@
-import { useState } from 'react';
 import { GoogleSignin, GoogleSigninButton, statusCodes } from '@react-native-google-signin/google-signin';
 
+import { useAuthStore } from '@/stores/auth';
+import { useLogin } from '@/api/auth';
+
 export function SignIn() {
-  const [userInfo, setUserInfo] = useState();
+  const login = useAuthStore((state) => state.login);
+  const loginMutation = useLogin();
 
   GoogleSignin.configure({
     webClientId: process.env.EXPO_PUBLIC_WEB_CLIENT_ID,
@@ -14,19 +17,20 @@ export function SignIn() {
       const userInfo = await GoogleSignin.signIn();
       console.log(JSON.stringify(userInfo, null, 2));
 
-      setUserInfo({ userInfo });
+      loginMutation.mutate(
+        {
+          email: userInfo.user.email,
+          name: userInfo.user.name || '',
+          imageUrl: userInfo.user.photo || '',
+        },
+        {
+          onSuccess: (data) => {
+            login(data.access_token);
+          },
+        },
+      );
     } catch (error: any) {
       console.log(JSON.stringify(error, null, 2));
-
-      if (error.code === statusCodes.SIGN_IN_CANCELLED) {
-        // user cancelled the login flow
-      } else if (error.code === statusCodes.IN_PROGRESS) {
-        // operation (e.g. sign in) is in progress already
-      } else if (error.code === statusCodes.PLAY_SERVICES_NOT_AVAILABLE) {
-        // play services not available or outdated
-      } else {
-        // some other error happened
-      }
     }
   };
 

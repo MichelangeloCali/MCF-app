@@ -1,5 +1,6 @@
 import { View, Text } from 'react-native';
 
+import { useShiftRegister } from '@/api/shift';
 import { tw } from '@/lib';
 import { formatDateTimeRange, translatePeriodToPt } from '@/utils';
 import type { Shift } from '@/types';
@@ -10,10 +11,14 @@ type HealthFacilityShiftCardPropsType = {
 };
 
 export function HealthFacilityShiftCard({ shift }: HealthFacilityShiftCardPropsType) {
-  const { available, duration, endTime, period, startTime } = shift;
+  const { available, duration, endTime, period, startTime, shiftId } = shift;
+
+  const shiftRegister = useShiftRegister();
 
   const handleSubmitShift = () => {
-    console.log('candidatou');
+    shiftRegister.mutate({
+      shiftId,
+    });
   };
 
   return (

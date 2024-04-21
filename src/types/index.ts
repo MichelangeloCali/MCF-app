@@ -21,6 +21,16 @@ export type HealthFacility = {
 };
 
 export type MyShifts = Shift & {
+  id: string;
   healthFacilityType: 'hospital' | 'clinic';
-  healthFacilityName: string;
+  healthFacility: {
+    name: string;
+    type: string;
+  };
+};
+
+export type User = {
+  name: string;
+  email: string;
+  profileImage?: string;
 };

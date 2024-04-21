@@ -1,6 +1,7 @@
 import { View, Text } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 
+import { useShiftRemove } from '@/api/shift';
 import { tw } from '@/lib';
 import { formatDateTimeRange, translatePeriodToPt } from '@/utils';
 import type { MyShifts } from '@/types';
@@ -11,12 +12,20 @@ type MyShiftCardPropsType = {
 };
 
 export function MyShiftCard({ MyShift }: MyShiftCardPropsType) {
-  const { healthFacilityName, healthFacilityType, shiftId, available, duration, endTime, period, startTime } = MyShift;
+  const { healthFacility, id, available, duration, endTime, period, startTime } = MyShift;
 
-  const hospital = healthFacilityType === 'hospital';
+  console.log('shiftId card', id);
+
+  const shitfRemove = useShiftRemove();
+
+  const hospital = healthFacility.type === 'hospital';
 
   const handleSubmitShift = () => {
-    console.log('retirou');
+    shitfRemove.mutate({
+      shiftId: id,
+    });
+
+    console.log('remove');
   };
 
   return (
@@ -27,7 +36,7 @@ export function MyShiftCard({ MyShift }: MyShiftCardPropsType) {
         </View>
 
         <View style={tw``}>
-          <Text style={tw`font-sans-bold android:leading-5`}>{healthFacilityName}</Text>
+          <Text style={tw`font-sans-bold android:leading-5`}>{healthFacility.name}</Text>
           <Text style={tw`font-sans-reg android:leading-5 text-xs`}>Turno da {translatePeriodToPt(period)}</Text>
           <Text style={tw`font-sans-reg android:leading-5 text-xs`}>Início: {formatDateTimeRange(startTime)}</Text>
           <Text style={tw`font-sans-reg android:leading-5 text-xs`}>Fim: {formatDateTimeRange(endTime)}</Text>

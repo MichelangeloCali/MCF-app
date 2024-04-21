@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { FlatList, Pressable, Text } from 'react-native';
 import { FontAwesome5 } from '@expo/vector-icons';
 
-import { getWeekDays } from '@/utils';
 import { tw } from '@/lib';
 
 type DatePickerType = { day: string; date: string };
@@ -11,6 +10,23 @@ type DateContainerPropsType = {
   date: DatePickerType;
   onPress: () => void;
   onDateSelect: (date: DatePickerType) => void;
+};
+
+type DatePickerProps = {
+  setDate: React.Dispatch<
+    React.SetStateAction<{
+      day: string;
+      date: string;
+    }>
+  >;
+  date: {
+    day: string;
+    date: string;
+  };
+  dateObject: {
+    day: string;
+    date: string;
+  }[];
 };
 
 const DateContainer = ({ onPress, date, onDateSelect }: DateContainerPropsType) => {
@@ -25,20 +41,11 @@ const DateContainer = ({ onPress, date, onDateSelect }: DateContainerPropsType) 
   );
 };
 
-export function DatePicker() {
-  const weekDays = getWeekDays();
-  const dateObject = weekDays.map((item, index) => {
-    if (index === 0) return { day: 'hoje', date: item.split(' ')[1] };
-    if (index === 1) return { day: 'amanhã', date: item.split(' ')[1] };
-    return { day: item.split(' ')[0], date: item.split(' ')[1] };
-  });
-
-  const [date, setDate] = useState(dateObject[0]);
+export function DatePicker({ date, setDate, dateObject }: DatePickerProps) {
   const [isExpanded, setIsExpanded] = useState(false);
 
   const handleDayFilter = () => {
     setIsExpanded((prevState) => !prevState);
-    // console.log('handleDayFilter', date);
   };
 
   const handleDateSelect = (selectedDate: DatePickerType) => {

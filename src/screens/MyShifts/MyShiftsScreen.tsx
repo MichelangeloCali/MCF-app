@@ -9,7 +9,7 @@ export function MyShiftsScreen() {
     <View style={tw`flex-1`}>
       <Header />
       <HeaderSection title="Meus Turnos" />
-      <DatePicker />
+      {/* <DatePicker /> */}
       <MyShiftsList />
     </View>
   );
