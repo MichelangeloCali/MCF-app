@@ -39,6 +39,10 @@ Esse design foi elaborado a partir de prototipação no figma, podes consultar [
   └── /utils
 ```
 
+## Rodar o projeto localmente:
+Para rodar o projeto clone esse repositório, navegue até o diretório raiz e instale o `yarn`, tenha certeza de possuir o Node v.18 instalado globalmente em seu computador.
+Em seguida, rode o comando `yarn ios` para rodar no emulador IPhone ou execute o comando `yarn android` para rodar no emulador Android. 
+
 ### Contato do desenvolvedor:
 
 - [LinkedIn](https://www.linkedin.com/in/michelangelocali/)
