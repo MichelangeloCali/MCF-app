@@ -18,6 +18,7 @@ export function HealthFacilityList() {
   };
 
   const flattenData = healthFacilities.data?.pages.flatMap((page) => page.data);
+  console.log('healthFacilities', healthFacilities.data?.pages);
 
   if (!flattenData) {
     return null;

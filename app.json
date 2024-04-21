@@ -15,7 +15,8 @@
 
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.michelangelocali.mcfapp"
+      "bundleIdentifier": "com.michelangelocali.mcfapp",
+      "googleServicesFile": "./GoogleService-Info.plist"
     },
 
     "android": {
@@ -24,14 +25,23 @@
         "backgroundColor": "#ffffff"
       },
       "icon": "./assets/icon-android.png",
-      "package": "com.michelangelocali.mcfapp"
+      "package": "com.michelangelocali.mcfapp",
+      "googleServicesFile": "./google-services.json"
     },
 
     "web": {
       "favicon": "./assets/favicon.png"
     },
 
-    "plugins": ["expo-font"],
+    "plugins": [
+      "expo-font",
+      [
+        "@react-native-google-signin/google-signin",
+        {
+          "iosUrlScheme": "com.michelangelocali.mcfapp"
+        }
+      ]
+    ],
 
     "scheme": "mcfapp"
   }

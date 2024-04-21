@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "995410934082",
+    "project_id": "optimal-carving-421014",
+    "storage_bucket": "optimal-carving-421014.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:995410934082:android:d7b502354e406d819130db",
+        "android_client_info": {
+          "package_name": "com.michelangelocali.mcfapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "995410934082-toc8pbrihmu3l1soosl99rj9e64bbvij.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.michelangelocali.mcfapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "995410934082-ocbkivo48b3409ehikao7pjt0k6lufik.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClIjZQ2XWZqVXzsZ4wwJvuDpKk2_TCoeM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "995410934082-ocbkivo48b3409ehikao7pjt0k6lufik.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "995410934082-ob8ef2urc9bhf0tqrndejoda91f31i9e.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.michelangelocali.mcfapp"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
