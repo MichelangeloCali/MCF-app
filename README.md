@@ -3,7 +3,7 @@
 Esse é o repositório mobile, para consultar repositório API [aqui](https://github.com/MichelangeloCali/MFC-back) 
 
 
-Esse design foi elaborado a partir de prototipação no figma, podes consultar [aqui](https://www.figma.com/file/gaxcYekkGvJUkvI6YDp4Tg/Untitled?type=design&node-id=0%3A1&mode=design&t=gTsWV28cjMtvP0Df-1)
+Esse design foi elaborado a partir de prototipação no figma, podes consultar [aqui](https://www.figma.com/file/gaxcYekkGvJUkvI6YDp4Tg/Untitled?type=design&node-id=3%3A444&mode=design&t=wsEXTlHsVmpxR4Np-1)
 
 
 ## O projeto foi desenvolvido com as seguintes stacks
