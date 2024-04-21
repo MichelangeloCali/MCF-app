@@ -3,6 +3,7 @@ export type Period = 'morning' | 'afternoon' | 'night';
 export type Shift = {
   shiftId: string;
   userId: string;
+  healthFacilityId: string;
   available: boolean;
   period: Period;
   duration: 6 | 8 | 12 | 24;
